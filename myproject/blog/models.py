@@ -10,7 +10,7 @@ class Post(models.Model):
     
     title = models.CharField(max_length=200)
     body = models.TextField()
-    image = models.FileField(upload_to = 'static/', null=True, blank= True)
+    image = models.FileField(upload_to = '', null=True, blank= True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     slug= models.SlugField()
     created_at = models.DateField(auto_now_add=True)
