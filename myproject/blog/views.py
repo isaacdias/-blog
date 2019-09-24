@@ -26,21 +26,12 @@ def post_create(request):
 
 		form = PostForm(request.POST, request.FILES)
 
-		if(form.is_valid()):
-			post_title = form.cleaned_data['title']
-			post_slug = form.cleaned_data['slug']
-			post_body = form.cleaned_data['body']
-			post_image = form.cleaned_data['image']
-			post_author = form.cleaned_data['author']
-			post_status = form.cleaned_data['status']
-
-			new_post = Post(title=post_title, slug=post_slug, body=post_body, image=post_image, 
-                   author=post_author, status=post_status)
-			new_post.save()
+		if form.is_valid():
+			form.save()
 
 			return redirect('blog:post_list')
 
-	elif(request.method == 'GET'):
+	elif request.method == 'GET':
 		return render(request, 'blog/add_post.html', {'form':form})
 
 
