@@ -22,18 +22,20 @@ def post_detail(request, slug):
 def post_create(request):
 	form = PostForm()
 
-	if(request.method == 'POST'):
+	if request.method == 'POST':
 
-		form = PostForm(request.POST)
+		form = PostForm(request.POST, request.FILES)
 
 		if(form.is_valid()):
 			post_title = form.cleaned_data['title']
 			post_slug = form.cleaned_data['slug']
 			post_body = form.cleaned_data['body']
+			post_image = form.cleaned_data['image']
 			post_author = form.cleaned_data['author']
 			post_status = form.cleaned_data['status']
 
-			new_post = Post(title=post_title, slug=post_slug, body=post_body, author=post_author, status=post_status)
+			new_post = Post(title=post_title, slug=post_slug, body=post_body, image=post_image, 
+                   author=post_author, status=post_status)
 			new_post.save()
 
 			return redirect('blog:post_list')
