@@ -41,9 +41,9 @@ def post_update(request, id):
     
     if request.method == 'POST':
         
-        form = PostForm(request.POST, instance=post)
+        form = PostForm(request.POST, request.FILES, instance=post)
         
-        if form.is_valid:
+        if form.is_valid():
             post = form.save(commit=False)
             post.title = form.cleaned_data['title']
             post.slug = form.cleaned_data['slug']
@@ -56,7 +56,7 @@ def post_update(request, id):
             return redirect('blog:post_list')
         
         else:
-            return render(request, 'blog/edit_post.html', {'form':form, 'post':form})
+            return render(request, 'blog/edit_post.html', {'form':form, 'post':post})
     
     elif request.method == 'GET':
         return render(request, 'blog/edit_post.html', {'form':form, 'post':form})
