@@ -40,6 +40,7 @@
 
 .card {
 	margin: auto;
+	margin-top: 30px;
 	border-radius: 0;
 }
 
@@ -66,6 +67,10 @@
 .card .btn.btn-primary {
 	margin: auto;
 	display: block;
+}
+
+.card-title{
+	height: 50px;
 }
 
 .logged-in-p{
@@ -117,7 +122,7 @@ footer .copy{
     font-size: 20px;
 }
 
-.edit-post{
+.btn-edit-post{
 	background-color: #4682B4;
 	color: #FFF;
 	cursor: pointer;
@@ -126,10 +131,16 @@ footer .copy{
     
 }
 
-.delete-post{
+.btn-delete-post{
 	background-color: #ff0000;
 	color: #FFF;
 	cursor: pointer;
     margin: 5px;
     font-size: 20px;
 }
+
+.edit-post{
+	text-align: center;
+	margin-top: 10px;
+}
+
