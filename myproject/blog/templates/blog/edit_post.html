@@ -1,4 +1,5 @@
 {% extends 'blog/base.html' %}
+{% load bootstrap %}
 {% block title %}Editar '{{post.title}}' {% endblock %}
 
 {% block content %}
@@ -7,7 +8,7 @@
 		<div>
             <form action="." method="POST" enctype='multipart/form-data'>
                 {% csrf_token %}
-                {{ form.as_p }}
+                {{ form|bootstrap }}
                 <input class="edit-post" type="submit" class="btn btn-default" value="Editar">
             </form>
         </div>
