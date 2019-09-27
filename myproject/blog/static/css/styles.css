@@ -109,6 +109,13 @@ footer .copy{
 	text-align: center;
 }
 
+.btn-add-post{
+	background-color: #4682B4;
+	color: #FFF;
+	cursor: pointer;
+    margin: 5px;
+    font-size: 20px;
+}
 
 .edit-post{
 	background-color: #4682B4;
