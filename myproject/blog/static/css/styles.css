@@ -151,3 +151,11 @@ footer .copy{
 .titulo-about-us{
 	margin-top: 10px;
 }
+
+.btn-contact{
+	background-color: #4682B4;
+	color: #FFF;
+	cursor: pointer;
+    margin: 5px;
+    font-size: 20px;
+}
