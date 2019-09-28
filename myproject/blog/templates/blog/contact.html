@@ -1,9 +1,15 @@
 {% extends 'blog/base.html' %}
+{% load bootstrap %}
 
 {% block title %} Contato {% endblock %}
 
 {% block content %}
     <div class="container">
-        <h1> Quer entrar em contato conosco? </h1>
+        <h1>Contato</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form|bootstrap }}
+        <input class="btn-contact" type="submit" value='Enviar'>
+        </form>
     </div>
 {% endblock %}
