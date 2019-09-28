@@ -7,3 +7,9 @@ class PostForm(ModelForm):
     class Meta:
         model = Post
         fields = ['title', 'slug', 'image', 'body', 'author', 'status']
+
+
+class ContactForm(forms.Form):
+    name = forms.CharField(required=True)
+    email = forms.EmailField(required=True)
+    message = forms.CharField(required=True)
