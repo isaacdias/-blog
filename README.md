@@ -1,6 +1,6 @@
 ## Blog Blocos Olinda
 
-Blog criado como projeto de estudos do Django Framework.
+Blog criado como projeto de estudos do Django Framework, trabalhando com CRUD, formulário de contato, criação de usuário e login.
 
 - Python 3.7.1
 - Django 2.2.5
