@@ -10,6 +10,7 @@ Blog criado como projeto de estudos do Django Framework, trabalhando com CRUD, f
 - active o virtualenv
 - pip install django
 - pip install django-bootstrap-form
+- pip install pillow
 - python manager.py makemigrations
 - python manager.py migrate
 - python manager.py runserver
